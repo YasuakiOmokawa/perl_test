@@ -3,6 +3,6 @@ use strict;
 use warnings;
 
 while (my $line = <>) {
-  chomp;
+  chomp $line;
   print "$line\n";
 }
