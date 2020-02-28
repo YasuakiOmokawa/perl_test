@@ -20,26 +20,43 @@ use lib "$MY_DIR/../lib";
 
 sub tsv_to_json {
   my $fh = shift;
-  my $is_header = TRUE;
   my @headers;
-  my %hash;
   my $json_data = {};
+  my $is_header = TRUE;
   while (<$fh>) {
+
+    # 改行コードはデータ処理に不便なことが多いため、削除
     chomp;
+
     my @row = split /\t/, $_;
+
+    # ヘッダ情報は後で使うので保存
     if ($is_header) {
       $is_header = FALSE;
       @headers = @row;
       next;
     }
 
-    @hash{@headers} = @row; # @ヘッダ名と項目のkey - valueデータを作る
-    $json_data->{$hash{key}} = [] unless exists $json_data->{$hash{key}};
-    my %d = %hash;
-    push @{$json_data->{$hash{key}}}, \%d;
+    # データの列名をkeyにし、項目をvalueにしたハッシュ（行ハッシュ）を作る
+    my %hash;
+    @hash{@headers} = @row;
+
+    # 集計項目
+    my $key = 'data';
+
+    # 集計配列の初期作成
+    $json_data->{$key} = [] unless exists $json_data->{$key};
+
+    # 集計配列へ、作成した行ハッシュを追加
+    push @{$json_data->{$key}}, \%hash;
   }
 
-  return to_json($json_data, {utf8=>1, pretty=>1});
+  # JSONデータへ変換
+  return to_json($json_data, {utf8=>1, pretty=>1, canonical=>1});
 }
 
 1;
+
+__END__
+
+my $key = $hash{year};

@@ -3,5 +3,7 @@ use strict;
 use warnings;
 
 while (my $line = <>) {
+  chomp $line;
   print $line;
+  print "\n";
 }

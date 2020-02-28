@@ -93,4 +93,22 @@ sub create_checker_item {
   return $chks;
 }
 
+subtest "handling sample tsv to json" => sub {
+
+  my $name = 'annual_profit';
+  my $file     = "$test_data_dir/${name}.tsv";
+  my $savefile = "$test_data_dir/${name}.json";
+
+  open my $fh, "<", $file
+    or die "Can't open $file: $!";
+
+  my $json_data = tsv_to_json($fh);
+  open(my $out, ">", $savefile);
+  print $out $json_data;
+  close $out;
+  $checkers = create_checker_item();
+  is(TRUE, 1, 'ok');
+  done_testing;
+};
+
 done_testing;
