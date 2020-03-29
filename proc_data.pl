@@ -4,6 +4,7 @@ use warnings;
 
 my $sales = 0;
 my $is_header = 1;
+my $year = '';
 while (my $line = <>) {
   chomp $line;
   my @row = split /,/, $line;
@@ -14,6 +15,7 @@ while (my $line = <>) {
     next;
   }
 
+  $year = $row[0];
   $sales += $row[2];
-  print "$row[0], $sales\n";
 }
+print "$year, $sales\n";
