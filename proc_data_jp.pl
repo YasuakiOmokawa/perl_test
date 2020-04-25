@@ -1,21 +1,18 @@
 #! /usr/bin/env perl
 use strict;
 use warnings;
-
 use Encode qw(decode encode);
 use utf8;
-
 use Data::Dumper;
 
 my $sales = 0;
 my $is_header = 1;
 my @headers;
-while ( my $line = decode('Shift_JIS', <>) ) {
-  print $line . "\n";
-  chomp $line;
-  my @row = split /,/, $line;
+my @datas;
 
-  print Dumper \@row;
+while ( my $line = <> ) {
+  chomp $line;
+  my @row = split /,/, decode('Shift_JIS', $line);
 
   if ($is_header) {
     $is_header = 0;
@@ -27,8 +24,8 @@ while ( my $line = decode('Shift_JIS', <>) ) {
   my %hash;
   @hash{@headers} = @row;
 
-  print Dumper \%hash;
-
-  print $hash{member} . "\n";
-  # print encode('UTF-8', $hash{member}) . "\n";
+  # 結果配列に格納
+  push @datas, \%hash;
 }
+
+print Dumper \@datas;
