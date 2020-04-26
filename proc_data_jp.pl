@@ -3,16 +3,18 @@ use strict;
 use warnings;
 use Encode qw(decode encode);
 use utf8;
+use JSON qw(encode_json);
 use Data::Dumper;
+use feature qw(say);
 
 my $sales = 0;
 my $is_header = 1;
 my @headers;
 my @datas;
 
-while ( my $line = <> ) {
+while ( my $line = decode('Shift_JIS', <>) ) {
   chomp $line;
-  my @row = split /,/, decode('Shift_JIS', $line);
+  my @row = split /,/, $line;
 
   if ($is_header) {
     $is_header = 0;
@@ -28,4 +30,4 @@ while ( my $line = <> ) {
   push @datas, \%hash;
 }
 
-print Dumper \@datas;
+say encode_json(\@datas);
