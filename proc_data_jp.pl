@@ -11,6 +11,7 @@ my $sales = 0;
 my $is_header = 1;
 my @headers;
 my @datas;
+my $
 
 # 行入力セパレータをCRLFへ
 local $/ = "\x0D\x0A";
@@ -31,8 +32,10 @@ while ( my $line = decode('Shift_JIS', <>) ) {
 
   # 結果配列に格納
   push @datas, \%hash;
+
+
 }
 
 say encode_json(\@datas);
 
-say $datas[0]{member};
+say encode('UTF-8', $datas[0]{member});
