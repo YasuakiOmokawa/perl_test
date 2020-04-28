@@ -12,6 +12,9 @@ my $is_header = 1;
 my @headers;
 my @datas;
 
+# 行入力セパレータをCRLFへ
+local $/ = "\x0D\x0A";
+
 while ( my $line = decode('Shift_JIS', <>) ) {
   chomp $line;
   my @row = split /,/, $line;
@@ -31,3 +34,5 @@ while ( my $line = decode('Shift_JIS', <>) ) {
 }
 
 say encode_json(\@datas);
+
+say $datas[0]{member};
