@@ -3,15 +3,13 @@ use strict;
 use warnings;
 use Encode qw(decode encode);
 use utf8;
-use JSON qw(encode_json);
+use JSON;
 use Data::Dumper;
 use feature qw(say);
 
-my $sales = 0;
 my $is_header = 1;
 my @headers;
 my @datas;
-my $
 
 # 行入力セパレータをCRLFへ
 local $/ = "\x0D\x0A";
@@ -32,10 +30,15 @@ while ( my $line = decode('Shift_JIS', <>) ) {
 
   # 結果配列に格納
   push @datas, \%hash;
-
-
 }
 
-say encode_json(\@datas);
+# データ一覧表示
+my $json = JSON->new->utf8->canonical->pretty->encode(\@datas);
+say $json;
 
-say encode('UTF-8', $datas[0]{member});
+# データを使って計算
+my $sato_sales = 0;
+for my $data (@datas) {
+  $sato_sales += $data->{sales} if $data->{member} eq '佐藤';
+}
+say encode('UTF-8', "佐藤さんの売り上げは ${sato_sales} 円です。");
