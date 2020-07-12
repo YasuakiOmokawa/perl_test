@@ -13,7 +13,7 @@ my $sales_sato = 0;
 # 行入力セパレータをCRLFへ
 local $/ = "\x0D\x0A";
 
-while ( my $line = decode('Shift_JIS', <>) ) {
+while ( my $line = decode('cp932', <>) ) {
   chomp $line;
   my @row = split /,/, $line;
 
@@ -31,6 +31,6 @@ while ( my $line = decode('Shift_JIS', <>) ) {
   $sales_sato += $hash{sales} if $hash{member} =~ /佐藤/;
 }
 
-say encode('UTF-8', "佐藤さんの売り上げは ${sales_sato} 円です。");
+say encode('cp932', "佐藤さんの売り上げは ${sales_sato} 円です。");
 
 __END__
