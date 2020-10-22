@@ -3,6 +3,9 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-main	http_crawler_async.pl	10;"	s
-main	http_crawler_stdin.pl	8;"	s
+!_TAG_PROGRAM_VERSION	5.8	//
+TsvToJson	.\lib\TsvToJson.pm	1;"	p
+TsvToJson::tsv_to_json	.\lib\TsvToJson.pm	21;"	s
+main	.\http_crawler_async.pl	10;"	s
+main	.\http_crawler_stdin.pl	8;"	s
+tsv_to_json	.\lib\TsvToJson.pm	21;"	s
