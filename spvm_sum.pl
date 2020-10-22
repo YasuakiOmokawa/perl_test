@@ -18,5 +18,5 @@ my $total_packed = MyMath->sum($sv_nums);
 print "Total Packed: $total_packed\n";
 
 # Call My Sample routine
-my $total = MySmpl->sum([3,6,8,9]);
-print "Total: $total\n";
+my $total2 = MySmpl->sum([3,6,8,9]);
+print "Total2: $total2\n";
