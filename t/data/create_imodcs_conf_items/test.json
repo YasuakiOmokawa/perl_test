@@ -1,346 +1,346 @@
 {
    "{data}{for_annual}{imo_dcs}" : {
-      "arr_port" : {
-         "{format}{round}" : "\"\"",
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r",
-         "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "item" : "arr_port",
-         "{threshold}{min}" : "null"
-      },
-      "arr_port_display" : {
-         "item" : "arr_port_display",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{format}{datetime}" : "\"\"",
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r",
-         "{format}{round}" : "\"\"",
-         "{threshold}{min}" : "null"
-      },
-      "foc_dogo_per_distance" : {
-         "{threshold}{min}" : "null",
-         "item" : "foc_dogo_per_distance",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{format}{datetime}" : "\"\"",
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r",
-         "{format}{round}" : "\"\""
-      },
       "transport_work" : {
+         "{format}{round}" : "\"\"",
+         "{format}{datetime}" : "\"\"",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{threshold}{min}" : "null",
          "item" : "transport_work",
-         "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r",
-         "{format}{round}" : "\"\"",
-         "{threshold}{min}" : "null"
+         "{format}{init_val}" : "---",
+         "{threshold}{max}" : "null"
       },
-      "dep_date_time" : {
-         "{format}{init_val}\r" : "---\r",
+      "co2_per_distance" : {
+         "item" : "co2_per_distance",
+         "{format}{init_val}" : "---",
          "{threshold}{max}" : "null",
          "{format}{round}" : "\"\"",
-         "item" : "dep_date_time",
-         "{format}{datetime}" : "%m/%d %H:%M",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{threshold}{min}" : "null"
-      },
-      "cars" : {
          "{threshold}{min}" : "null",
-         "{format}{round}" : "\"\"",
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r",
-         "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "item" : "cars"
-      },
-      "foc_other_per_distance" : {
-         "{threshold}{min}" : "null",
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r",
-         "{format}{round}" : "\"\"",
-         "item" : "foc_other_per_distance",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{format}{datetime}" : "\"\""
-      },
-      "eeoi" : {
-         "{threshold}{min}" : "null",
-         "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "item" : "eeoi",
-         "{format}{round}" : "\"\"",
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---"
-      },
-      "foc_lfo_per_transport_work" : {
-         "{threshold}{min}" : "null",
-         "item" : "foc_lfo_per_transport_work",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{format}{datetime}" : "\"\"",
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r",
-         "{format}{round}" : "\"\""
-      },
-      "cargo_weight" : {
-         "{threshold}{min}" : "null",
-         "{format}{round}" : "\"\"",
-         "{format}{init_val}\r" : "---\r",
-         "{threshold}{max}" : "null",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{format}{datetime}" : "\"\"",
-         "item" : "cargo_weight"
-      },
-      "foc_hfo" : {
-         "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "item" : "foc_hfo",
-         "{format}{round}" : "2",
-         "{format}{init_val}\r" : "***\r",
-         "{threshold}{max}" : "99999.99",
-         "{threshold}{min}" : "0.00"
-      },
-      "co2_hfo" : {
-         "{threshold}{min}" : "0.00",
-         "{format}{round}" : "2",
-         "{format}{init_val}\r" : "***\r",
-         "{threshold}{max}" : "999999.99",
-         "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "item" : "co2_hfo"
-      },
-      "co2_lfo" : {
-         "{threshold}{min}" : "0.00",
-         "{threshold}{max}" : "999999.99",
-         "{format}{init_val}\r" : "***\r",
-         "{format}{round}" : "2",
-         "item" : "co2_lfo",
          "{format}{datetime}" : "\"\"",
          "key" : "{data}{for_annual}{imo_dcs}"
       },
-      "distance_travelled" : {
-         "{format}{init_val}\r" : "\"\"\r",
-         "{threshold}{max}" : "99999",
-         "{format}{round}" : "0",
-         "item" : "distance_travelled",
-         "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{threshold}{min}" : "0"
-      },
-      "foc_lfo" : {
-         "item" : "foc_lfo",
-         "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{threshold}{max}" : "99999.99",
-         "{format}{init_val}\r" : "***\r",
+      "co2_lfo" : {
+         "item" : "co2_lfo",
+         "{format}{init_val}" : "***",
+         "{threshold}{max}" : "999999.99",
          "{format}{round}" : "2",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{datetime}" : "\"\"",
          "{threshold}{min}" : "0.00"
+      },
+      "foc_dogo_per_distance" : {
+         "{threshold}{max}" : "null",
+         "{format}{init_val}" : "---",
+         "item" : "foc_dogo_per_distance",
+         "{threshold}{min}" : "null",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{datetime}" : "\"\"",
+         "{format}{round}" : "\"\""
+      },
+      "dep_port_display" : {
+         "{format}{datetime}" : "\"\"",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{threshold}{min}" : "null",
+         "{format}{round}" : "\"\"",
+         "{threshold}{max}" : "null",
+         "item" : "dep_port_display",
+         "{format}{init_val}" : "---"
+      },
+      "voyage_number" : {
+         "{format}{init_val}" : "---",
+         "item" : "voyage_number",
+         "{threshold}{max}" : "null",
+         "{format}{round}" : "\"\"",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{datetime}" : "\"\"",
+         "{threshold}{min}" : "null"
+      },
+      "foc_hfo" : {
+         "{threshold}{max}" : "99999.99",
+         "{format}{init_val}" : "***",
+         "item" : "foc_hfo",
+         "{threshold}{min}" : "0.00",
+         "{format}{datetime}" : "\"\"",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{round}" : "2"
+      },
+      "foc_hfo_per_transport_work" : {
+         "{format}{round}" : "\"\"",
+         "{threshold}{min}" : "null",
+         "{format}{datetime}" : "\"\"",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{init_val}" : "---",
+         "item" : "foc_hfo_per_transport_work",
+         "{threshold}{max}" : "null"
       },
       "foc_dogo" : {
          "{threshold}{min}" : "0.00",
-         "item" : "foc_dogo",
          "key" : "{data}{for_annual}{imo_dcs}",
          "{format}{datetime}" : "\"\"",
-         "{format}{init_val}\r" : "***\r",
+         "{format}{round}" : "2",
          "{threshold}{max}" : "99999.99",
-         "{format}{round}" : "2"
+         "item" : "foc_dogo",
+         "{format}{init_val}" : "***"
       },
-      "arr_date_time" : {
+      "arr_port" : {
+         "item" : "arr_port",
+         "{format}{init_val}" : "---",
+         "{threshold}{max}" : "null",
+         "{format}{round}" : "\"\"",
          "{threshold}{min}" : "null",
-         "item" : "arr_date_time",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{format}{datetime}" : "%m/%d %H:%M",
-         "{format}{init_val}\r" : "---\r",
-         "{threshold}{max}" : "null",
-         "{format}{round}" : "\"\""
-      },
-      "co2_dogo" : {
-         "{threshold}{max}" : "999999.99",
-         "{format}{init_val}\r" : "***\r",
-         "{format}{round}" : "2",
-         "item" : "co2_dogo",
-         "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{threshold}{min}" : "0.00"
-      },
-      "foc_lfo_per_distance" : {
-         "{threshold}{min}" : "null",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{format}{datetime}" : "\"\"",
-         "item" : "foc_lfo_per_distance",
-         "{format}{round}" : "\"\"",
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r"
-      },
-      "passenger" : {
-         "item" : "passenger",
-         "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{format}{init_val}\r" : "---\r",
-         "{threshold}{max}" : "null",
-         "{format}{round}" : "\"\"",
-         "{threshold}{min}" : "null"
-      },
-      "foc_dogo_per_transport_work" : {
-         "item" : "foc_dogo_per_transport_work",
-         "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{format}{init_val}\r" : "---\r",
-         "{threshold}{max}" : "null",
-         "{format}{round}" : "\"\"",
-         "{threshold}{min}" : "null"
-      },
-      "foc_hfo_per_distance" : {
-         "{format}{round}" : "\"\"",
-         "{format}{init_val}\r" : "---\r",
-         "{threshold}{max}" : "null",
-         "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "item" : "foc_hfo_per_distance",
-         "{threshold}{min}" : "null"
-      },
-      "co2_other" : {
-         "{threshold}{min}" : "0.00",
-         "{threshold}{max}" : "999999.99",
-         "{format}{init_val}\r" : "\"\"\r",
-         "{format}{round}" : "2",
-         "item" : "co2_other",
          "{format}{datetime}" : "\"\"",
          "key" : "{data}{for_annual}{imo_dcs}"
       },
       "foc_other" : {
          "key" : "{data}{for_annual}{imo_dcs}",
          "{format}{datetime}" : "\"\"",
-         "item" : "foc_other",
+         "{threshold}{min}" : "0.00",
          "{format}{round}" : "2",
-         "{format}{init_val}\r" : "\"\"\r",
          "{threshold}{max}" : "99999.99",
-         "{threshold}{min}" : "0.00"
+         "{format}{init_val}" : "\"\"",
+         "item" : "foc_other"
       },
-      "dep_port_display" : {
-         "{format}{datetime}" : "\"\"",
+      "foc_lfo" : {
+         "{threshold}{min}" : "0.00",
          "key" : "{data}{for_annual}{imo_dcs}",
-         "item" : "dep_port_display",
-         "{format}{round}" : "\"\"",
-         "{format}{init_val}\r" : "---\r",
-         "{threshold}{max}" : "null",
-         "{threshold}{min}" : "null"
-      },
-      "dep_port" : {
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r",
-         "{format}{round}" : "\"\"",
-         "item" : "dep_port",
          "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{threshold}{min}" : "null"
+         "{format}{round}" : "2",
+         "{threshold}{max}" : "99999.99",
+         "item" : "foc_lfo",
+         "{format}{init_val}" : "***"
       },
-      "voyage_number" : {
+      "dep_date_time" : {
+         "{format}{round}" : "\"\"",
          "{threshold}{min}" : "null",
-         "{format}{round}" : "\"\"",
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r",
-         "{format}{datetime}" : "\"\"",
          "key" : "{data}{for_annual}{imo_dcs}",
-         "item" : "voyage_number"
-      },
-      "co2_per_distance" : {
-         "{threshold}{min}" : "null",
-         "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "item" : "co2_per_distance",
-         "{format}{round}" : "\"\"",
-         "{format}{init_val}\r" : "---\r",
+         "{format}{datetime}" : "%m/%d %H:%M",
+         "item" : "dep_date_time",
+         "{format}{init_val}" : "---",
          "{threshold}{max}" : "null"
       },
-      "unit_empty" : {
-         "{threshold}{min}" : "null",
-         "item" : "unit_empty",
+      "distance_travelled" : {
+         "{format}{round}" : "0",
          "{format}{datetime}" : "\"\"",
          "key" : "{data}{for_annual}{imo_dcs}",
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r",
-         "{format}{round}" : "\"\""
+         "{threshold}{min}" : "0",
+         "item" : "distance_travelled",
+         "{format}{init_val}" : "\"\"",
+         "{threshold}{max}" : "99999"
       },
-      "time_at_sea" : {
+      "cargo_weight" : {
          "{format}{round}" : "\"\"",
-         "{format}{init_val}\r" : "---\r",
-         "{threshold}{max}" : "null",
-         "key" : "{data}{for_annual}{imo_dcs}",
          "{format}{datetime}" : "\"\"",
-         "item" : "time_at_sea",
-         "{threshold}{min}" : "null"
-      },
-      "eu_mrv_display" : {
+         "key" : "{data}{for_annual}{imo_dcs}",
          "{threshold}{min}" : "null",
-         "item" : "eu_mrv_display",
+         "item" : "cargo_weight",
+         "{format}{init_val}" : "---",
+         "{threshold}{max}" : "null"
+      },
+      "co2_hfo" : {
+         "item" : "co2_hfo",
+         "{format}{init_val}" : "***",
+         "{threshold}{max}" : "999999.99",
+         "{format}{round}" : "2",
+         "{threshold}{min}" : "0.00",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{datetime}" : "\"\""
+      },
+      "co2_other" : {
+         "item" : "co2_other",
+         "{format}{init_val}" : "\"\"",
+         "{threshold}{max}" : "999999.99",
+         "{format}{round}" : "2",
+         "{threshold}{min}" : "0.00",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{datetime}" : "\"\""
+      },
+      "co2_dogo" : {
+         "{format}{round}" : "2",
+         "{threshold}{min}" : "0.00",
+         "{format}{datetime}" : "\"\"",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{init_val}" : "***",
+         "item" : "co2_dogo",
+         "{threshold}{max}" : "999999.99"
+      },
+      "foc_hfo_per_distance" : {
+         "{format}{round}" : "\"\"",
+         "{threshold}{min}" : "null",
          "key" : "{data}{for_annual}{imo_dcs}",
          "{format}{datetime}" : "\"\"",
+         "{format}{init_val}" : "---",
+         "item" : "foc_hfo_per_distance",
+         "{threshold}{max}" : "null"
+      },
+      "dwt_carried" : {
+         "{format}{init_val}" : "---",
+         "item" : "dwt_carried",
          "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r",
-         "{format}{round}" : "\"\""
+         "{format}{round}" : "\"\"",
+         "{threshold}{min}" : "null",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{datetime}" : "\"\""
+      },
+      "arr_date_time" : {
+         "{format}{round}" : "\"\"",
+         "{format}{datetime}" : "%m/%d %H:%M",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{threshold}{min}" : "null",
+         "item" : "arr_date_time",
+         "{format}{init_val}" : "---",
+         "{threshold}{max}" : "null"
       },
       "volume" : {
          "{format}{round}" : "\"\"",
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r",
-         "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "item" : "volume",
-         "{threshold}{min}" : "null"
-      },
-      "hours_underway" : {
-         "{threshold}{min}" : "0.0",
-         "item" : "hours_underway",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{format}{datetime}" : "\"\"",
-         "{threshold}{max}" : "9999.9",
-         "{format}{init_val}\r" : "\"\"\r",
-         "{format}{round}" : "1"
-      },
-      "eu_mrv" : {
          "{threshold}{min}" : "null",
          "{format}{datetime}" : "\"\"",
          "key" : "{data}{for_annual}{imo_dcs}",
-         "item" : "eu_mrv",
+         "{format}{init_val}" : "---",
+         "item" : "volume",
+         "{threshold}{max}" : "null"
+      },
+      "eu_mrv" : {
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{datetime}" : "\"\"",
+         "{threshold}{min}" : "null",
          "{format}{round}" : "\"\"",
          "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r"
+         "item" : "eu_mrv",
+         "{format}{init_val}" : "---"
+      },
+      "foc_lfo_per_transport_work" : {
+         "{threshold}{max}" : "null",
+         "item" : "foc_lfo_per_transport_work",
+         "{format}{init_val}" : "---",
+         "{threshold}{min}" : "null",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{datetime}" : "\"\"",
+         "{format}{round}" : "\"\""
+      },
+      "cars" : {
+         "{threshold}{max}" : "null",
+         "{format}{init_val}" : "---",
+         "item" : "cars",
+         "{threshold}{min}" : "null",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{datetime}" : "\"\"",
+         "{format}{round}" : "\"\""
+      },
+      "eeoi" : {
+         "item" : "eeoi",
+         "{format}{init_val}" : "---",
+         "{threshold}{max}" : "null",
+         "{format}{round}" : "\"\"",
+         "{threshold}{min}" : "null",
+         "{format}{datetime}" : "\"\"",
+         "key" : "{data}{for_annual}{imo_dcs}"
+      },
+      "hours_underway" : {
+         "item" : "hours_underway",
+         "{format}{init_val}" : "\"\"",
+         "{threshold}{max}" : "9999.9",
+         "{format}{round}" : "1",
+         "{threshold}{min}" : "0.0",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{datetime}" : "\"\""
+      },
+      "foc_dogo_per_transport_work" : {
+         "{threshold}{min}" : "null",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{datetime}" : "\"\"",
+         "{format}{round}" : "\"\"",
+         "{threshold}{max}" : "null",
+         "item" : "foc_dogo_per_transport_work",
+         "{format}{init_val}" : "---"
+      },
+      "arr_port_display" : {
+         "{format}{round}" : "\"\"",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{datetime}" : "\"\"",
+         "{threshold}{min}" : "null",
+         "{format}{init_val}" : "---",
+         "item" : "arr_port_display",
+         "{threshold}{max}" : "null"
+      },
+      "eu_mrv_display" : {
+         "{format}{round}" : "\"\"",
+         "{format}{datetime}" : "\"\"",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{threshold}{min}" : "null",
+         "{format}{init_val}" : "---",
+         "item" : "eu_mrv_display",
+         "{threshold}{max}" : "null"
+      },
+      "passenger" : {
+         "item" : "passenger",
+         "{format}{init_val}" : "---",
+         "{threshold}{max}" : "null",
+         "{format}{round}" : "\"\"",
+         "{threshold}{min}" : "null",
+         "{format}{datetime}" : "\"\"",
+         "key" : "{data}{for_annual}{imo_dcs}"
+      },
+      "unit_empty" : {
+         "{format}{init_val}" : "---",
+         "item" : "unit_empty",
+         "{threshold}{max}" : "null",
+         "{format}{round}" : "\"\"",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{datetime}" : "\"\"",
+         "{threshold}{min}" : "null"
       },
       "unit_laden" : {
          "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r",
-         "{format}{round}" : "\"\"",
+         "{format}{init_val}" : "---",
          "item" : "unit_laden",
+         "{format}{datetime}" : "\"\"",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{threshold}{min}" : "null",
+         "{format}{round}" : "\"\""
+      },
+      "dep_port" : {
+         "{format}{round}" : "\"\"",
+         "{threshold}{min}" : "null",
          "key" : "{data}{for_annual}{imo_dcs}",
          "{format}{datetime}" : "\"\"",
+         "item" : "dep_port",
+         "{format}{init_val}" : "---",
+         "{threshold}{max}" : "null"
+      },
+      "time_at_sea" : {
+         "{format}{round}" : "\"\"",
+         "{threshold}{min}" : "null",
+         "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{datetime}" : "\"\"",
+         "item" : "time_at_sea",
+         "{format}{init_val}" : "---",
+         "{threshold}{max}" : "null"
+      },
+      "foc_other_per_distance" : {
+         "{format}{init_val}" : "---",
+         "item" : "foc_other_per_distance",
+         "{threshold}{max}" : "null",
+         "{format}{round}" : "\"\"",
+         "{format}{datetime}" : "\"\"",
+         "key" : "{data}{for_annual}{imo_dcs}",
          "{threshold}{min}" : "null"
       },
-      "dwt_carried" : {
-         "{threshold}{min}" : "null",
+      "foc_lfo_per_distance" : {
+         "{threshold}{max}" : "null",
+         "item" : "foc_lfo_per_distance",
+         "{format}{init_val}" : "---",
          "{format}{datetime}" : "\"\"",
          "key" : "{data}{for_annual}{imo_dcs}",
-         "item" : "dwt_carried",
-         "{format}{round}" : "\"\"",
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r"
+         "{threshold}{min}" : "null",
+         "{format}{round}" : "\"\""
       },
       "foc_other_per_transport_work" : {
-         "{format}{datetime}" : "\"\"",
          "key" : "{data}{for_annual}{imo_dcs}",
+         "{format}{datetime}" : "\"\"",
+         "{threshold}{min}" : "null",
+         "{format}{round}" : "\"\"",
+         "{threshold}{max}" : "null",
          "item" : "foc_other_per_transport_work",
-         "{format}{round}" : "\"\"",
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r",
-         "{threshold}{min}" : "null"
-      },
-      "foc_hfo_per_transport_work" : {
-         "item" : "foc_hfo_per_transport_work",
-         "{format}{datetime}" : "\"\"",
-         "key" : "{data}{for_annual}{imo_dcs}",
-         "{threshold}{max}" : "null",
-         "{format}{init_val}\r" : "---\r",
-         "{format}{round}" : "\"\"",
-         "{threshold}{min}" : "null"
+         "{format}{init_val}" : "---"
       }
    }
 }

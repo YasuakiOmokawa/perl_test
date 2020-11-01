@@ -2,306 +2,60 @@
    "for_annual" : {
       "imo_dcs" : [
          {
-            "co2_dogo" : {
+            "arr_port_display" : {
                "format" : {
-                  "round" : "2",
-                  "init_val" : null,
-                  "datetime" : ""
+                  "init_val" : "---",
+                  "datetime" : "",
+                  "round" : ""
                },
+               "type" : "none"
+            }
+         },
+         {
+            "eu_mrv_display" : {
+               "format" : {
+                  "round" : "",
+                  "datetime" : "",
+                  "init_val" : "---"
+               },
+               "type" : "none"
+            }
+         },
+         {
+            "passenger" : {
                "type" : "none",
-               "threshold" : {
-                  "max" : "999999.99",
-                  "min" : "0.00"
+               "format" : {
+                  "round" : "",
+                  "datetime" : "",
+                  "init_val" : "---"
                }
+            }
+         },
+         {
+            "unit_empty" : {
+               "format" : {
+                  "round" : "",
+                  "datetime" : "",
+                  "init_val" : "---"
+               },
+               "type" : "none"
             }
          },
          {
             "foc_lfo_per_distance" : {
                "type" : "none",
                "format" : {
+                  "round" : "",
                   "datetime" : "",
-                  "init_val" : null,
-                  "round" : ""
+                  "init_val" : "---"
                }
             }
          },
          {
-            "arr_date_time" : {
+            "foc_other_per_transport_work" : {
                "format" : {
+                  "init_val" : "---",
                   "round" : "",
-                  "init_val" : null,
-                  "datetime" : "%m/%d %H:%M"
-               },
-               "type" : "none"
-            }
-         },
-         {
-            "foc_dogo" : {
-               "format" : {
-                  "init_val" : null,
-                  "round" : "2",
-                  "datetime" : ""
-               },
-               "threshold" : {
-                  "min" : "0.00",
-                  "max" : "99999.99"
-               },
-               "type" : "none"
-            }
-         },
-         {
-            "foc_other" : {
-               "threshold" : {
-                  "max" : "99999.99",
-                  "min" : "0.00"
-               },
-               "type" : "none",
-               "format" : {
-                  "round" : "2",
-                  "init_val" : null,
-                  "datetime" : ""
-               }
-            }
-         },
-         {
-            "co2_other" : {
-               "format" : {
-                  "datetime" : "",
-                  "round" : "2",
-                  "init_val" : null
-               },
-               "threshold" : {
-                  "max" : "999999.99",
-                  "min" : "0.00"
-               },
-               "type" : "none"
-            }
-         },
-         {
-            "foc_hfo_per_distance" : {
-               "type" : "none",
-               "format" : {
-                  "datetime" : "",
-                  "round" : "",
-                  "init_val" : null
-               }
-            }
-         },
-         {
-            "passenger" : {
-               "format" : {
-                  "init_val" : null,
-                  "round" : "",
-                  "datetime" : ""
-               },
-               "type" : "none"
-            }
-         },
-         {
-            "foc_dogo_per_transport_work" : {
-               "format" : {
-                  "datetime" : "",
-                  "init_val" : null,
-                  "round" : ""
-               },
-               "type" : "none"
-            }
-         },
-         {
-            "dep_port" : {
-               "format" : {
-                  "datetime" : "",
-                  "init_val" : null,
-                  "round" : ""
-               },
-               "type" : "none"
-            }
-         },
-         {
-            "dep_port_display" : {
-               "format" : {
-                  "datetime" : "",
-                  "init_val" : null,
-                  "round" : ""
-               },
-               "type" : "none"
-            }
-         },
-         {
-            "co2_hfo" : {
-               "threshold" : {
-                  "min" : "0.00",
-                  "max" : "999999.99"
-               },
-               "type" : "none",
-               "format" : {
-                  "datetime" : "",
-                  "round" : "2",
-                  "init_val" : null
-               }
-            }
-         },
-         {
-            "foc_hfo" : {
-               "format" : {
-                  "datetime" : "",
-                  "init_val" : null,
-                  "round" : "2"
-               },
-               "type" : "none",
-               "threshold" : {
-                  "max" : "99999.99",
-                  "min" : "0.00"
-               }
-            }
-         },
-         {
-            "foc_lfo" : {
-               "format" : {
-                  "datetime" : "",
-                  "round" : "2",
-                  "init_val" : null
-               },
-               "threshold" : {
-                  "max" : "99999.99",
-                  "min" : "0.00"
-               },
-               "type" : "none"
-            }
-         },
-         {
-            "distance_travelled" : {
-               "threshold" : {
-                  "max" : "99999",
-                  "min" : "0"
-               },
-               "type" : "none",
-               "format" : {
-                  "datetime" : "",
-                  "init_val" : null,
-                  "round" : "0"
-               }
-            }
-         },
-         {
-            "co2_lfo" : {
-               "threshold" : {
-                  "min" : "0.00",
-                  "max" : "999999.99"
-               },
-               "type" : "none",
-               "format" : {
-                  "datetime" : "",
-                  "init_val" : null,
-                  "round" : "2"
-               }
-            }
-         },
-         {
-            "foc_other_per_distance" : {
-               "type" : "none",
-               "format" : {
-                  "datetime" : "",
-                  "round" : "",
-                  "init_val" : null
-               }
-            }
-         },
-         {
-            "cars" : {
-               "format" : {
-                  "round" : "",
-                  "init_val" : null,
-                  "datetime" : ""
-               },
-               "type" : "none"
-            }
-         },
-         {
-            "eeoi" : {
-               "type" : "none",
-               "format" : {
-                  "datetime" : "",
-                  "init_val" : null,
-                  "round" : ""
-               }
-            }
-         },
-         {
-            "foc_lfo_per_transport_work" : {
-               "type" : "none",
-               "format" : {
-                  "datetime" : "",
-                  "round" : "",
-                  "init_val" : null
-               }
-            }
-         },
-         {
-            "cargo_weight" : {
-               "format" : {
-                  "datetime" : "",
-                  "round" : "",
-                  "init_val" : null
-               },
-               "type" : "none"
-            }
-         },
-         {
-            "arr_port" : {
-               "type" : "none",
-               "format" : {
-                  "round" : "",
-                  "init_val" : null,
-                  "datetime" : ""
-               }
-            }
-         },
-         {
-            "arr_port_display" : {
-               "type" : "none",
-               "format" : {
-                  "round" : "",
-                  "init_val" : null,
-                  "datetime" : ""
-               }
-            }
-         },
-         {
-            "foc_dogo_per_distance" : {
-               "format" : {
-                  "round" : "",
-                  "init_val" : null,
-                  "datetime" : ""
-               },
-               "type" : "none"
-            }
-         },
-         {
-            "transport_work" : {
-               "format" : {
-                  "init_val" : null,
-                  "round" : "",
-                  "datetime" : ""
-               },
-               "type" : "none"
-            }
-         },
-         {
-            "dep_date_time" : {
-               "format" : {
-                  "datetime" : "%m/%d %H:%M",
-                  "round" : "",
-                  "init_val" : null
-               },
-               "type" : "none"
-            }
-         },
-         {
-            "dwt_carried" : {
-               "format" : {
-                  "round" : "",
-                  "init_val" : null,
                   "datetime" : ""
                },
                "type" : "none"
@@ -311,9 +65,123 @@
             "unit_laden" : {
                "type" : "none",
                "format" : {
+                  "round" : "",
                   "datetime" : "",
-                  "init_val" : null,
+                  "init_val" : "---"
+               }
+            }
+         },
+         {
+            "dep_port" : {
+               "format" : {
+                  "round" : "",
+                  "datetime" : "",
+                  "init_val" : "---"
+               },
+               "type" : "none"
+            }
+         },
+         {
+            "time_at_sea" : {
+               "type" : "none",
+               "format" : {
+                  "init_val" : "---",
+                  "round" : "",
+                  "datetime" : ""
+               }
+            }
+         },
+         {
+            "foc_other_per_distance" : {
+               "type" : "none",
+               "format" : {
+                  "datetime" : "",
+                  "round" : "",
+                  "init_val" : "---"
+               }
+            }
+         },
+         {
+            "arr_date_time" : {
+               "format" : {
+                  "init_val" : "---",
+                  "round" : "",
+                  "datetime" : "%m/%d %H:%M"
+               },
+               "type" : "none"
+            }
+         },
+         {
+            "dwt_carried" : {
+               "format" : {
+                  "init_val" : "---",
+                  "round" : "",
+                  "datetime" : ""
+               },
+               "type" : "none"
+            }
+         },
+         {
+            "foc_hfo_per_distance" : {
+               "format" : {
+                  "init_val" : "---",
+                  "round" : "",
+                  "datetime" : ""
+               },
+               "type" : "none"
+            }
+         },
+         {
+            "cars" : {
+               "format" : {
+                  "round" : "",
+                  "datetime" : "",
+                  "init_val" : "---"
+               },
+               "type" : "none"
+            }
+         },
+         {
+            "hours_underway" : {
+               "format" : {
+                  "datetime" : "",
+                  "round" : "1",
+                  "init_val" : ""
+               },
+               "threshold" : {
+                  "min" : "0.0",
+                  "max" : "9999.9"
+               },
+               "type" : "none"
+            }
+         },
+         {
+            "eeoi" : {
+               "format" : {
+                  "init_val" : "---",
+                  "datetime" : "",
                   "round" : ""
+               },
+               "type" : "none"
+            }
+         },
+         {
+            "foc_dogo_per_transport_work" : {
+               "format" : {
+                  "round" : "",
+                  "datetime" : "",
+                  "init_val" : "---"
+               },
+               "type" : "none"
+            }
+         },
+         {
+            "volume" : {
+               "type" : "none",
+               "format" : {
+                  "round" : "",
+                  "datetime" : "",
+                  "init_val" : "---"
                }
             }
          },
@@ -321,74 +189,120 @@
             "eu_mrv" : {
                "format" : {
                   "datetime" : "",
-                  "init_val" : null,
-                  "round" : ""
+                  "round" : "",
+                  "init_val" : "---"
                },
                "type" : "none"
             }
          },
          {
-            "foc_other_per_transport_work" : {
+            "foc_lfo_per_transport_work" : {
+               "type" : "none",
+               "format" : {
+                  "round" : "",
+                  "datetime" : "",
+                  "init_val" : "---"
+               }
+            }
+         },
+         {
+            "cargo_weight" : {
                "type" : "none",
                "format" : {
                   "datetime" : "",
                   "round" : "",
-                  "init_val" : null
+                  "init_val" : "---"
                }
             }
          },
          {
-            "foc_hfo_per_transport_work" : {
-               "type" : "none",
+            "foc_lfo" : {
                "format" : {
-                  "round" : "",
-                  "init_val" : null,
+                  "init_val" : "***",
+                  "round" : "2",
                   "datetime" : ""
-               }
-            }
-         },
-         {
-            "time_at_sea" : {
-               "type" : "none",
-               "format" : {
-                  "round" : "",
-                  "init_val" : null,
-                  "datetime" : ""
-               }
-            }
-         },
-         {
-            "volume" : {
-               "type" : "none",
-               "format" : {
-                  "init_val" : null,
-                  "round" : "",
-                  "datetime" : ""
-               }
-            }
-         },
-         {
-            "eu_mrv_display" : {
-               "format" : {
-                  "datetime" : "",
-                  "init_val" : null,
-                  "round" : ""
+               },
+               "threshold" : {
+                  "max" : "99999.99",
+                  "min" : "0.00"
                },
                "type" : "none"
             }
          },
          {
-            "hours_underway" : {
+            "dep_date_time" : {
+               "format" : {
+                  "round" : "",
+                  "datetime" : "%m/%d %H:%M",
+                  "init_val" : "---"
+               },
+               "type" : "none"
+            }
+         },
+         {
+            "distance_travelled" : {
                "type" : "none",
                "threshold" : {
-                  "max" : "9999.9",
-                  "min" : "0.0"
+                  "min" : "0",
+                  "max" : "99999"
                },
                "format" : {
-                  "round" : "1",
-                  "init_val" : null,
-                  "datetime" : ""
+                  "round" : "0",
+                  "datetime" : "",
+                  "init_val" : ""
                }
+            }
+         },
+         {
+            "co2_other" : {
+               "type" : "none",
+               "format" : {
+                  "datetime" : "",
+                  "round" : "2",
+                  "init_val" : ""
+               },
+               "threshold" : {
+                  "min" : "0.00",
+                  "max" : "999999.99"
+               }
+            }
+         },
+         {
+            "co2_dogo" : {
+               "format" : {
+                  "round" : "2",
+                  "datetime" : "",
+                  "init_val" : "***"
+               },
+               "threshold" : {
+                  "min" : "0.00",
+                  "max" : "999999.99"
+               },
+               "type" : "none"
+            }
+         },
+         {
+            "co2_hfo" : {
+               "format" : {
+                  "datetime" : "",
+                  "round" : "2",
+                  "init_val" : "***"
+               },
+               "threshold" : {
+                  "max" : "999999.99",
+                  "min" : "0.00"
+               },
+               "type" : "none"
+            }
+         },
+         {
+            "dep_port_display" : {
+               "format" : {
+                  "round" : "",
+                  "datetime" : "",
+                  "init_val" : "---"
+               },
+               "type" : "none"
             }
          },
          {
@@ -396,29 +310,115 @@
                "format" : {
                   "datetime" : "",
                   "round" : "",
-                  "init_val" : null
+                  "init_val" : "---"
                },
                "type" : "none"
+            }
+         },
+         {
+            "transport_work" : {
+               "format" : {
+                  "round" : "",
+                  "datetime" : "",
+                  "init_val" : "---"
+               },
+               "type" : "none"
+            }
+         },
+         {
+            "co2_lfo" : {
+               "type" : "none",
+               "format" : {
+                  "init_val" : "***",
+                  "round" : "2",
+                  "datetime" : ""
+               },
+               "threshold" : {
+                  "max" : "999999.99",
+                  "min" : "0.00"
+               }
             }
          },
          {
             "co2_per_distance" : {
+               "type" : "none",
+               "format" : {
+                  "datetime" : "",
+                  "round" : "",
+                  "init_val" : "---"
+               }
+            }
+         },
+         {
+            "foc_dogo_per_distance" : {
+               "type" : "none",
                "format" : {
                   "round" : "",
-                  "init_val" : null,
-                  "datetime" : ""
+                  "datetime" : "",
+                  "init_val" : "---"
+               }
+            }
+         },
+         {
+            "foc_dogo" : {
+               "threshold" : {
+                  "min" : "0.00",
+                  "max" : "99999.99"
+               },
+               "format" : {
+                  "datetime" : "",
+                  "round" : "2",
+                  "init_val" : "***"
                },
                "type" : "none"
             }
          },
          {
-            "unit_empty" : {
+            "foc_hfo_per_transport_work" : {
+               "type" : "none",
+               "format" : {
+                  "init_val" : "---",
+                  "datetime" : "",
+                  "round" : ""
+               }
+            }
+         },
+         {
+            "arr_port" : {
+               "type" : "none",
+               "format" : {
+                  "init_val" : "---",
+                  "round" : "",
+                  "datetime" : ""
+               }
+            }
+         },
+         {
+            "foc_other" : {
+               "threshold" : {
+                  "max" : "99999.99",
+                  "min" : "0.00"
+               },
                "format" : {
                   "datetime" : "",
-                  "round" : "",
-                  "init_val" : null
+                  "round" : "2",
+                  "init_val" : ""
                },
                "type" : "none"
+            }
+         },
+         {
+            "foc_hfo" : {
+               "type" : "none",
+               "threshold" : {
+                  "min" : "0.00",
+                  "max" : "99999.99"
+               },
+               "format" : {
+                  "init_val" : "***",
+                  "round" : "2",
+                  "datetime" : ""
+               }
             }
          }
       ]
