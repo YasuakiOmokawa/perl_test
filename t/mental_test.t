@@ -1,3 +1,5 @@
+use lib "t/../lib";
+
 use strict;
 use warnings;
 use Capture::Tiny qw/ capture /;
@@ -17,9 +19,9 @@ use lib "$FindBin::Bin/lib";
 use SPVM 'MentalTest';
 
 # begin test
-subtest "test" => sub {
+subtest "reversed_score" => sub {
 
-  is(TRUE, 1, 'ok');
+  is(MentalTest->reversed_score(5), 1, 'ok');
 
   done_testing;
 };
