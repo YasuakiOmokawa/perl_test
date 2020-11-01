@@ -1,0 +1,9 @@
+package MentalTest {
+  sub reversed_score : int ($score : int) {
+
+    my @scale = (1..$score);
+    my $res = 1;
+
+    return $res;
+  }
+}
