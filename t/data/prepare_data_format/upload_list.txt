@@ -1,2 +1,0 @@
-/usr/amoeba/pub/b/ESM.V3.1/lib/DataFormat.pm
-/usr/amoeba/pub/b/ESM.V3.1/lib/TsvToJson.pm
