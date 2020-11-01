@@ -23,3 +23,5 @@ my $pre_total = MyMath->spvm_sum_precompile($loop_count);
 print "Total Precompiled: $pre_total\n";
 my $native_total = MyMath->spvm_sum_native($loop_count);
 print "Total Native: $native_total\n";
+
+# Call with scaled calculator
