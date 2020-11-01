@@ -1,9 +1,12 @@
 package MentalTest {
+  use SPVM::IntList;
+
   sub reversed_score : int ($score : int) {
+    my $scale_list = SPVM::IntList->new_len(0);
+    for(my $i = $score; $i > 0; $i--) {
+      $scale_list->push($i);
+    }
 
-    my @scale = (1..$score);
-    my $res = 1;
-
-    return $res;
+    return $scale_list->get($score - 1);
   }
 }

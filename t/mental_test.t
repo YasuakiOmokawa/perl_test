@@ -21,7 +21,7 @@ use SPVM 'MentalTest';
 # begin test
 subtest "reversed_score" => sub {
 
-  is(MentalTest->reversed_score(5), 1, 'ok');
+  is(MentalTest->reversed_score(5), 1, '');
 
   done_testing;
 };
