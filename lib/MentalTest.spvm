@@ -1,6 +1,13 @@
 package MentalTest {
   use SPVM::IntList;
 
+  has scores : ro int[];
+
+  sub new : int[] ($value : int) {
+    my $self = new int[$value];
+    return $self;
+  }
+
   sub reversed_score : int ($score : int) {
     my $scale_list = SPVM::IntList->new_len(0);
     for(my $i = $score; $i > 0; $i--) {
