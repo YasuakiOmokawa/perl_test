@@ -6,8 +6,8 @@ use Benchmark qw/timethese cmpthese/;
 
 use SPVM 'MyMath';
 
-my $bench_count = 10_000;
-my $loop_count = 1_00_000;
+my $bench_count = 10_000_00;
+my $loop_count = 1_000;
 my $result = timethese($bench_count, {
   perl5_sum => sub {
     perl_sum($loop_count);
