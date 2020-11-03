@@ -17,3 +17,4 @@ package MentalTest {
     return $self->{scale_list}->get($score - 1);
   }
 }
+
