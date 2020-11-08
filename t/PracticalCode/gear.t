@@ -18,14 +18,14 @@ use SPVM 'PracticalCode::Gear';
 
 # begin test
 subtest "new" => sub {
-  my $gear = new PracticalCode::Gear(52, 11);
+  my $gear = new PracticalCode::Gear(52, 11, 1, 1.0);
   isa_ok($gear, 'PracticalCode::Gear');
 
   done_testing;
 };
 
 subtest "get field data" => sub {
-  my $gear = new PracticalCode::Gear(52, 11);
+  my $gear = new PracticalCode::Gear(52, 11, 1, 1.0);
   is($gear->get_chainring, 52, 'chainring');
   is($gear->get_cog, 11, 'cog');
 
@@ -33,7 +33,7 @@ subtest "get field data" => sub {
 };
 
 subtest "ratio" => sub {
-  my $gear = new PracticalCode::Gear(30, 27);
+  my $gear = new PracticalCode::Gear(30, 27, 1, 1.0);
   is($gear->ratio, 1.11111116409302, 'ratio');
 
   done_testing;
@@ -41,7 +41,7 @@ subtest "ratio" => sub {
 
 subtest "gear_inches" => sub {
   my $gear = new PracticalCode::Gear(52, 11, 26, 1.5);
-  is($gear->gear_inches, 137.09090909090909, 'valid');
+  is($gear->gear_inches, 137.090896606445, 'valid');
 
   done_testing;
 };
