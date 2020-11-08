@@ -32,6 +32,13 @@ subtest "get data" => sub {
   done_testing;
 };
 
+subtest "ratio" => sub {
+  my $gear = new PracticalCode::Gear(30, 27);
+  is($gear->ratio, 1.11111116409302, 'ratio');
+
+  done_testing;
+};
+
 
 
 done_testing;

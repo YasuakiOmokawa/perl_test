@@ -16,4 +16,8 @@ package PracticalCode::Gear {
   sub get_cog : int ($self : self) {
     return $self->{cog};
   }
+
+  sub ratio : float ($self : self) {
+    return $self->{chainring} / (float)$self->{cog};
+  }
 }
