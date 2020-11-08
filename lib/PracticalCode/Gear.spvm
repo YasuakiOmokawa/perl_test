@@ -15,18 +15,10 @@ package PracticalCode::Gear {
     return $self;
   }
 
-  sub get_chainring : int ($self : self) {
-    return $self->{chainring};
-  }
-
-  sub cog : float ($self : self) {
-    return (float)$self->{cog};
-  }
-
-  sub ratio : float ($self : self) {
-    return $self->{chainring} / $self->cog;
-  }
-
+  # accessor
+  sub chainring : int ($self : self) { return $self->{chainring}; }
+  sub cog : float ($self : self) { return (float)$self->{cog}; }
+  sub ratio : float ($self : self) { return $self->{chainring} / $self->cog; }
   sub rim : int ($self : self) { return $self->{rim}; }
   sub tire : float ($self : self) { return $self->{tire}; }
 

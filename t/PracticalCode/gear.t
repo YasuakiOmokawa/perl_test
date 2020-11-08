@@ -26,7 +26,7 @@ subtest "new" => sub {
 
 subtest "get field data" => sub {
   my $gear = new PracticalCode::Gear(52, 11, 1, 1.0);
-  is($gear->get_chainring, 52, 'chainring');
+  is($gear->chainring, 52, 'chainring');
   is($gear->cog, 11, 'cog');
 
   done_testing;
