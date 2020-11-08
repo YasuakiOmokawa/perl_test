@@ -39,6 +39,13 @@ subtest "ratio" => sub {
   done_testing;
 };
 
+subtest "gear_inches" => sub {
+  my $gear = new PracticalCode::Gear(52, 11, 26, 1.5);
+  is($gear->gear_inches, 137.09090909090909, 'valid');
+
+  done_testing;
+};
+
 
 
 done_testing;
