@@ -1,0 +1,23 @@
+package PracticalCode::Gear {
+  has chainring : int;
+  has cog : int;
+
+  sub new : PracticalCode::Gear ($chainring : int, $cog : int) {
+    my $self = new PracticalCode::Gear;
+    $self->{chainring} = $chainring;
+    $self->{cog} = $cog;
+    return $self;
+  }
+
+  sub get_chainring : int ($self : self) {
+    return $self->{chainring};
+  }
+
+  sub get_cog : int ($self : self) {
+    return $self->{cog};
+  }
+
+  sub ratio : float ($self : self) {
+    return $self->{chainring} / (float)$self->{cog};
+  }
+}
