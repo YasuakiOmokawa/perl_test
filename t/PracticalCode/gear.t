@@ -34,7 +34,7 @@ subtest "get field data" => sub {
 
 subtest "ratio" => sub {
   my $gear = new PracticalCode::Gear(30, 27, 1, 1.0);
-  is($gear->ratio, 1.11111116409302, 'ratio');
+  is($gear->ratio, 1.11111116409302, 'valid');
 
   done_testing;
 };
