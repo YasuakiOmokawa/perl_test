@@ -19,12 +19,12 @@ package PracticalCode::Gear {
     return $self->{chainring};
   }
 
-  sub get_cog : int ($self : self) {
-    return $self->{cog};
+  sub cog : float ($self : self) {
+    return (float)$self->{cog};
   }
 
   sub ratio : float ($self : self) {
-    return $self->{chainring} / (float)$self->{cog};
+    return $self->{chainring} / $self->cog;
   }
 
   sub gear_inches : float ($self : self) {
