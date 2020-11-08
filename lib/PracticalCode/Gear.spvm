@@ -27,8 +27,16 @@ package PracticalCode::Gear {
     return $self->{chainring} / $self->cog;
   }
 
+  sub rim : int ($self : self) { return $self->{rim}; }
+  sub tire : float ($self : self) { return $self->{tire}; }
+
   sub gear_inches : float ($self : self) {
-    # タイヤはリムの周りを囲むので、直径を計算するためには2倍する
-    return $self->ratio * ($self->{rim} + ($self->{tire} * 2));
+    return $self->ratio * $self->diameter;
   }
+
+  sub diameter : float ($self : self) {
+    # タイヤはリムの周りを囲むので、直径を計算するためには2倍する
+    return $self->rim + ($self->tire * 2);
+  }
+
 }
