@@ -1,0 +1,28 @@
+package PracticalCode::Wheel {
+  use SPVM::Math;
+
+  has rim : int;
+  has tire : float;
+
+  sub new : PracticalCode::Wheel (
+    $rim : int, $tire : float) {
+
+    my $self = new PracticalCode::Wheel;
+    $self->{rim} = $rim;
+    $self->{tire} = $tire;
+    return $self;
+  }
+
+  # accessor
+  sub rim : int ($self : self) { return $self->{rim}; }
+  sub tire : float ($self : self) { return $self->{tire}; }
+
+  sub diameter : float ($self : self) {
+    return $self->rim + ($self->tire * 2);
+  }
+
+  sub circumference : double ($self : self) {
+    return $self->diameter * SPVM::Math->pi;
+  }
+
+}
