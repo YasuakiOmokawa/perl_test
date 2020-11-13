@@ -26,16 +26,9 @@ subtest "new" => sub {
   done_testing;
 };
 
-subtest "get field data" => sub {
-  my $gear = new PracticalCode::Gear(52, 11, 1, 1.0);
-  is($gear->chainring, 52, 'chainring');
-  is($gear->cog, 11, 'cog');
-
-  done_testing;
-};
-
 subtest "ratio" => sub {
-  my $gear = new PracticalCode::Gear(30, 27, 1, 1.0);
+  my $wheel = new PracticalCode::Wheel(1, 1.0);
+  my $gear = new PracticalCode::Gear(30, 27, $wheel);
   is($gear->ratio, 1.11111116409302, 'valid');
 
   done_testing;
