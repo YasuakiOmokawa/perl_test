@@ -29,14 +29,15 @@ subtest "new" => sub {
 subtest "ratio" => sub {
   my $wheel = new PracticalCode::Wheel(1, 1.0);
   my $gear = new PracticalCode::Gear(30, 27, $wheel);
-  is($gear->ratio, 1.11111116409302, 'valid');
+  ok($gear->ratio, 1.11111116409302);
 
   done_testing;
 };
 
 subtest "gear_inches" => sub {
-  my $gear = new PracticalCode::Gear(52, 11, 26, 1.5);
-  is($gear->gear_inches, 137.090896606445, 'valid');
+  my $wheel = new PracticalCode::Wheel(26, 1.5);
+  my $gear = new PracticalCode::Gear(52, 11, $wheel);
+  ok($gear->gear_inches, 137.090896606445);
 
   done_testing;
 };
