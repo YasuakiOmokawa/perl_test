@@ -15,10 +15,12 @@ use lib "$FindBin::Bin/../../lib";
 
 # test module
 use SPVM 'PracticalCode::Gear';
+use SPVM 'PracticalCode::Wheel';
 
 # begin test
 subtest "new" => sub {
-  my $gear = new PracticalCode::Gear(52, 11, 1, 1.0);
+  my $wheel = new PracticalCode::Wheel(26, 1.5);
+  my $gear = new PracticalCode::Gear(52, 11, $wheel);
   isa_ok($gear, 'PracticalCode::Gear');
 
   done_testing;
