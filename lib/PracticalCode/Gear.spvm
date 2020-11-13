@@ -3,7 +3,6 @@ package PracticalCode::Gear {
 
   has chainring : int;
   has cog : int;
-  has rim : int;
   has wheel : PracticalCode::Wheel;
 
   sub new : PracticalCode::Gear (
@@ -19,7 +18,6 @@ package PracticalCode::Gear {
   # accessor
   sub chainring : int ($self : self) { return $self->{chainring}; }
   sub cog : float ($self : self) { return (float)$self->{cog}; }
-  sub rim : int ($self : self) { return $self->{rim}; }
   sub wheel : PracticalCode::Wheel ($self : self) { return $self->{wheel}; }
 
   sub ratio : float ($self : self) {
