@@ -1,34 +1,31 @@
 package PracticalCode::Gear {
+  use PracticalCode::Wheel;
+
   has chainring : int;
   has cog : int;
-  has rim : int;
-  has tire : float;
+  has wheel : PracticalCode::Wheel;
 
   sub new : PracticalCode::Gear (
-    $chainring : int, $cog : int, $rim : int, $tire : float) {
+    $chainring : int, $cog : int, $wheel : PracticalCode::Wheel) {
 
     my $self = new PracticalCode::Gear;
     $self->{chainring} = $chainring;
     $self->{cog} = $cog;
-    $self->{rim} = $rim;
-    $self->{tire} = $tire;
+    $self->{wheel} = $wheel;
     return $self;
   }
 
   # accessor
   sub chainring : int ($self : self) { return $self->{chainring}; }
   sub cog : float ($self : self) { return (float)$self->{cog}; }
-  sub ratio : float ($self : self) { return $self->{chainring} / $self->cog; }
-  sub rim : int ($self : self) { return $self->{rim}; }
-  sub tire : float ($self : self) { return $self->{tire}; }
+  sub wheel : PracticalCode::Wheel ($self : self) { return $self->{wheel}; }
 
-  sub gear_inches : float ($self : self) {
-    return $self->ratio * $self->diameter;
+  sub ratio : float ($self : self) {
+    return $self->{chainring} / $self->cog;
   }
 
-  sub diameter : float ($self : self) {
-    # タイヤはリムの周りを囲むので、直径を計算するためには2倍する
-    return $self->rim + ($self->tire * 2);
+  sub gear_inches : double ($self : self) {
+    return $self->ratio * $self->wheel->diameter;
   }
 
 }

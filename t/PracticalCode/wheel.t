@@ -14,34 +14,21 @@ use FindBin;
 use lib "$FindBin::Bin/../../lib";
 
 # test module
-use SPVM 'PracticalCode::Gear';
 use SPVM 'PracticalCode::Wheel';
 
 # begin test
 subtest "new" => sub {
   my $wheel = new PracticalCode::Wheel(26, 1.5);
-  my $gear = new PracticalCode::Gear(52, 11, $wheel);
-  isa_ok($gear, 'PracticalCode::Gear');
+  isa_ok($wheel, 'PracticalCode::Wheel');
 
   done_testing;
 };
 
-subtest "ratio" => sub {
-  my $wheel = new PracticalCode::Wheel(1, 1.0);
-  my $gear = new PracticalCode::Gear(30, 27, $wheel);
-  ok($gear->ratio, 1.11111116409302);
-
-  done_testing;
-};
-
-subtest "gear_inches" => sub {
+subtest "circumference" => sub {
   my $wheel = new PracticalCode::Wheel(26, 1.5);
-  my $gear = new PracticalCode::Gear(52, 11, $wheel);
-  ok($gear->gear_inches, 137.090896606445);
+  is($wheel->circumference, 91.106186954104, 'valid');
 
   done_testing;
 };
-
-
 
 done_testing;
