@@ -20,8 +20,7 @@ use SPVM 'PracticalCode::Wheel';
 # begin test
 subtest "new" => sub {
   my $wheel = new PracticalCode::Wheel(26, 1.5);
-  my $args = {chainring => 52, cog => 11, wheel => $wheel};
-  my $gear = new PracticalCode::Gear($args);
+  my $gear = new PracticalCode::Gear(52, 11, $wheel);
   isa_ok($gear, 'PracticalCode::Gear');
 
   done_testing;
