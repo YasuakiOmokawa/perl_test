@@ -8,6 +8,7 @@ use constant {
   TRUE  => 1,
   FALSE => 0,
 };
+use SPVM 'SPVM::Hash';
 
 # add search path to our modules
 use FindBin;
@@ -17,17 +18,19 @@ use lib "$FindBin::Bin/../../lib";
 use SPVM 'PracticalCode::Wheel';
 
 # begin test
-subtest "new" => sub {
-  my $wheel = new PracticalCode::Wheel(26, 1.5);
-  isa_ok($wheel, 'PracticalCode::Wheel');
+my $args = SPVM::Hash->new;
+$args->set_int(rim => 26);
+$args->set_float(tire => 1.5);
 
+subtest "new" => sub {
+  my $wheel = new PracticalCode::Wheel($args);
+  isa_ok($wheel, 'PracticalCode::Wheel');
   done_testing;
 };
 
 subtest "circumference" => sub {
-  my $wheel = new PracticalCode::Wheel(26, 1.5);
+  my $wheel = new PracticalCode::Wheel($args);
   is($wheel->circumference, 91.106186954104, 'valid');
-
   done_testing;
 };
 
