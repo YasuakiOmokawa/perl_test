@@ -8,26 +8,35 @@ use constant {
   TRUE  => 1,
   FALSE => 0,
 };
+use SPVM 'SPVM::Hash';
 
 # add search path to our modules
 use FindBin;
 use lib "$FindBin::Bin/../../lib";
 
-# test module
-use SPVM 'PracticalCode::Gear';
 use SPVM 'PracticalCode::Wheel';
 
-# begin test
-subtest "new" => sub {
-  my $wheel = new PracticalCode::Wheel(26, 1.5);
-  my $gear = new PracticalCode::Gear(52, 11, $wheel);
-  isa_ok($gear, 'PracticalCode::Gear');
+# test module
+use SPVM 'PracticalCode::Gear';
 
+# begin test
+my $args_wheel = SPVM::Hash->new;
+$args_wheel->set_int(rim => 26);
+$args_wheel->set_float(tire => 1.5);
+
+my $args_gear = SPVM::Hash->new;
+$args_gear->set_int(chainring => 52);
+$args_gear->set_int(cog => 11);
+$args_gear->set(wheel => new PracticalCode::Wheel($args_wheel));
+
+subtest "new" => sub {
+  my $gear = new PracticalCode::Gear($args_gear);
+  isa_ok($gear, 'PracticalCode::Gear');
   done_testing;
 };
 
 subtest "ratio" => sub {
-  my $wheel = new PracticalCode::Wheel(1, 1.0);
+  my $wheel = new PracticalCode::Wheel(26, 1.5);
   my $gear = new PracticalCode::Gear(30, 27, $wheel);
   ok($gear->ratio, 1.11111116409302);
 
