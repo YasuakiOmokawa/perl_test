@@ -1,15 +1,14 @@
 package PracticalCode::Wheel {
   use SPVM::Math;
+  use SPVM::Hash;
 
   has rim : int;
   has tire : float;
 
-  sub new : PracticalCode::Wheel (
-    $rim : int, $tire : float) {
-
+  sub new : PracticalCode::Wheel ($args : SPVM::Hash) {
     my $self = new PracticalCode::Wheel;
-    $self->{rim} = $rim;
-    $self->{tire} = $tire;
+    $self->{rim} = $args->get_int("rim");
+    $self->{tire} = $args->get_float("tire");
     return $self;
   }
 
