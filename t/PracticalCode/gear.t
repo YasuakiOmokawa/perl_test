@@ -14,9 +14,8 @@ use SPVM 'SPVM::Hash';
 use FindBin;
 use lib "$FindBin::Bin/../../lib";
 
-use SPVM 'PracticalCode::Wheel';
-
 # test module
+use SPVM 'PracticalCode::Wheel';
 use SPVM 'PracticalCode::Gear';
 
 # begin test
@@ -36,21 +35,15 @@ subtest "new" => sub {
 };
 
 subtest "ratio" => sub {
-  my $wheel = new PracticalCode::Wheel(26, 1.5);
-  my $gear = new PracticalCode::Gear(30, 27, $wheel);
-  ok($gear->ratio, 1.11111116409302);
-
+  my $gear = new PracticalCode::Gear($args_gear);
+  is($gear->ratio, 4.72727251052856);
   done_testing;
 };
 
 subtest "gear_inches" => sub {
-  my $wheel = new PracticalCode::Wheel(26, 1.5);
-  my $gear = new PracticalCode::Gear(52, 11, $wheel);
-  ok($gear->gear_inches, 137.090896606445);
-
+  my $gear = new PracticalCode::Gear($args_gear);
+  is($gear->gear_inches, 137.090896606445);
   done_testing;
 };
-
-
 
 done_testing;
