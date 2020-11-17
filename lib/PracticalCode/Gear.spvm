@@ -1,17 +1,16 @@
 package PracticalCode::Gear {
   use PracticalCode::Wheel;
+  use SPVM::Hash;
 
   has chainring : int;
   has cog : int;
   has wheel : PracticalCode::Wheel;
 
-  sub new : PracticalCode::Gear (
-    $chainring : int, $cog : int, $wheel : PracticalCode::Wheel) {
-
+  sub new : PracticalCode::Gear ($args : SPVM::Hash) {
     my $self = new PracticalCode::Gear;
-    $self->{chainring} = $chainring;
-    $self->{cog} = $cog;
-    $self->{wheel} = $wheel;
+    $self->{chainring} = $args->get_int("chainring");
+    $self->{cog} = $args->get_int("cog");
+    $self->{wheel} = (PracticalCode::Wheel)$args->get("wheel");
     return $self;
   }
 
