@@ -30,7 +30,7 @@ subtest "new" => sub {
 
 subtest "circumference" => sub {
   my $wheel = new PracticalCode::Wheel($args);
-  is($wheel->circumference, 91.106186954104, 'valid');
+  is($wheel->circumference, 91.106186954104);
   done_testing;
 };
 
