@@ -4,7 +4,9 @@ package PracticalCode::WheelWrapper {
 
   sub wheel : PracticalCode::Vendor::Wheel ($args : SPVM::Hash) {
     return PracticalCode::Vendor::Wheel->new(
-      $args->get_int("rim"), $args->get_float("tire"));
+      $args->get_int("rim"),
+      $args->get_float("tire"),
+    );
   }
 
 }
