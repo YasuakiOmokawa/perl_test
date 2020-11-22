@@ -18,8 +18,26 @@ package PracticalCode::Trip {
   sub customers : int ($self : self) { return $self->{customers}; }
   sub vehicle : int ($self : self) { return $self->{vehicle}; }
 
-  sub prepare : int ($mechanic : int) {
-    return $mechanic->prepare_bicycles($bicycles);
+  sub prepare : int ($self : self, $prepares : int) {
+    for (my $i = 0; $i < 10; $++) {
+      switch ($prepares->[$i]) {
+        case Mechanic: {
+          $prepares->[$i].prepare_bicycles($self->bicycles);
+          break;
+        }
+        case TripCordinator: {
+          $prepares->[$i].buy_food($self->customers);
+          break:
+        }
+        case Driver: {
+          $prepares->[$i].gas_up($self->vehicle)
+          break:
+        }
+        default: {
+
+        }
+      }
+    }
   }
 
 }

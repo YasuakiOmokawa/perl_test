@@ -1,0 +1,7 @@
+package PracticalCode::TripCoordinator {
+
+  sub buy_food : int ($customers) {
+    #...
+  }
+
+}
