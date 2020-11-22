@@ -1,0 +1,16 @@
+package PracticalCode::Trip {
+  use SPVM::Hash;
+
+  sub prepare_bicycles : int[] ($bicycles : int[]) {
+    my $res = int[];
+    for (my $i = 0; $i < 10; $i++) {
+      $res[$i] = prepare_bicycle($bicycles->[$i]);
+    }
+    return $res;
+  }
+
+  sub prepare_bicycle : int ($bicycle) {
+    #...
+  }
+
+}
