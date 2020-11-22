@@ -4,7 +4,7 @@ package PracticalCode::Vendor::Wheel {
   has rim : int;
   has tire : float;
 
-  sub new : PracticalCode::Wheel ($rim : int, $tire : float) {
+  sub new : PracticalCode::Vendor::Wheel ($rim : int, $tire : float) {
     my $self = new PracticalCode::Vendor::Wheel;
     $self->{rim} = $rim;
     $self->{tire} = $tire;
@@ -21,6 +21,10 @@ package PracticalCode::Vendor::Wheel {
 
   sub circumference : double ($self : self) {
     return $self->diameter * SPVM::Math->pi;
+  }
+
+  sub hello : string ($self : self) {
+    return "hello!";
   }
 
 }

@@ -28,10 +28,16 @@ subtest "new" => sub {
   done_testing;
 };
 
-# subtest "circumference" => sub {
-#   my $wheel = new PracticalCode::Wheel($args);
-#   is($wheel->circumference, 91.106186954104);
-#   done_testing;
-# };
+subtest "circumference" => sub {
+  my $wheel = PracticalCode::WheelWrapper->wheel($args);
+  is($wheel->circumference, 91.106186954104);
+  done_testing;
+};
+
+subtest "hello" => sub {
+  my $wheel = PracticalCode::WheelWrapper->wheel($args);
+  is($wheel->hello, "hello!");
+  done_testing;
+};
 
 done_testing;

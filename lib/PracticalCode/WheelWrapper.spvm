@@ -3,10 +3,8 @@ package PracticalCode::WheelWrapper {
   use PracticalCode::Vendor::Wheel;
 
   sub wheel : PracticalCode::Vendor::Wheel ($args : SPVM::Hash) {
-    my $wheel = new PracticalCode::Vendor::Wheel(
-      $args->get_int{"rim"}, $args->get_float{"tire"});
-
-    return $wheel;
+    return PracticalCode::Vendor::Wheel->new(
+      $args->get_int("rim"), $args->get_float("tire"));
   }
 
 }
