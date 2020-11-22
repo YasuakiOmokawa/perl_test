@@ -1,0 +1,12 @@
+package PracticalCode::WheelWrapper {
+  use SPVM::Hash;
+  use PracticalCode::Vendor::Wheel;
+
+  sub wheel : PracticalCode::Vendor::Wheel ($args : SPVM::Hash) {
+    return PracticalCode::Vendor::Wheel->new(
+      $args->get_int("rim"),
+      $args->get_float("tire"),
+    );
+  }
+
+}
