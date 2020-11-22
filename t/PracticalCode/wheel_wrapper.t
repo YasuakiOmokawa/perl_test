@@ -19,24 +19,22 @@ use SPVM 'PracticalCode::WheelWrapper';
 
 # begin test
 my $args = SPVM::Hash->new;
-$args->set_int(rim => 26);
-$args->set_float(tire => 1.5);
+$args->set_int(rim => 20);
+$args->set_float(tire => 1.8);
 
 subtest "new" => sub {
-  my $wheel = PracticalCode::WheelWrapper->wheel($args);
-  isa_ok($wheel, 'PracticalCode::Vendor::Wheel');
+  isa_ok(PracticalCode::WheelWrapper->wheel($args), 'PracticalCode::Vendor::Wheel');
   done_testing;
 };
 
 subtest "circumference" => sub {
   my $wheel = PracticalCode::WheelWrapper->wheel($args);
-  is($wheel->circumference, 91.106186954104);
+  is($wheel->circumference, 74.1415878231416);
   done_testing;
 };
 
 subtest "hello" => sub {
-  my $wheel = PracticalCode::WheelWrapper->wheel($args);
-  is($wheel->hello, "hello!");
+  is(PracticalCode::WheelWrapper->wheel($args)->hello, "hello!");
   done_testing;
 };
 
