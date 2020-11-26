@@ -1,5 +1,9 @@
 package PracticalCode::TripCoordinator {
 
+  sub prepare_trip : int[] ($trip : int[]) {
+    return buy_food($trip->customers);
+  }
+
   sub buy_food : int ($customers) {
     #...
   }
