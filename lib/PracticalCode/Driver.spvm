@@ -1,5 +1,10 @@
 package PracticalCode::Driver {
 
+  sub prepare_trip : void ($trip : int[]) {
+    gas_up($trip->vehicle);
+    fill_water_tank($trip->vehicle);
+  }
+
   sub gas_up : int ($vehicle) {
     #...
   }
