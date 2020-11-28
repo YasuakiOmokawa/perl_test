@@ -31,6 +31,12 @@ subtest "new" => sub {
   done_testing;
 };
 
+subtest "size" => sub {
+  my $bicycle = new PracticalCode::Bicycle($args);
+  is($bicycle->size, 26);
+  done_testing;
+};
+
 # subtest "circumference" => sub {
 #   my $wheel = new PracticalCode::Wheel($args);
 #   is($wheel->circumference, 91.106186954104);
