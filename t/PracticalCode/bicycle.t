@@ -22,8 +22,8 @@ use SPVM 'PracticalCode::Bicycle';
 my $strs = SPVM::StringList->new_len(0);
 $strs->push('green');
 my $args = SPVM::Hash->new;
-$args->set_int(size => 26);
 $args->set(tape_color => $strs->shift);
+$args->set_int(size => 26);
 
 subtest "new" => sub {
   my $bicycle = new PracticalCode::Bicycle($args);
