@@ -1,0 +1,18 @@
+package PracticalCode::Bicycle {
+  use SPVM::Hash;
+
+  has size : int;
+  has tape_color : string;
+
+  sub new : PracticalCode::Bicycle ($args : SPVM::Hash) {
+    my $self = new PracticalCode::Bicycle;
+    $self->{size} = $args->get_int("size");
+    $self->{tape_color} = (string)$args->get("tape_color");
+    return $self;
+  }
+
+  # accessor
+  sub size : int ($self : self) { return $self->{size}; }
+  sub tape_color : string ($self : self) { return $self->{tape_color}; }
+
+}
