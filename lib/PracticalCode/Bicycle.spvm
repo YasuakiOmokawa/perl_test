@@ -15,4 +15,12 @@ package PracticalCode::Bicycle {
   sub size : int ($self : self) { return $self->{size}; }
   sub tape_color : string ($self : self) { return $self->{tape_color}; }
 
+  sub spares : SPVM::Hash ($self : self) {
+    my $res = SPVM::Hash->new;
+    $res->set_int(tire_size => 23);
+    $res->set(chain => "10-speed");
+    $res->set(tape_color => "red");
+    return $res;
+  }
+
 }

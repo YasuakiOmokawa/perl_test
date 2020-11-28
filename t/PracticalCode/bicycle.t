@@ -26,15 +26,22 @@ $args->set(tape_color => $strs->shift);
 $args->set_int(size => 26);
 
 subtest "new" => sub {
-  my $bicycle = new PracticalCode::Bicycle($args);
-  isa_ok($bicycle, 'PracticalCode::Bicycle');
+  my $bike = new PracticalCode::Bicycle($args);
+  isa_ok($bike, 'PracticalCode::Bicycle');
   done_testing;
 };
 
-# subtest "circumference" => sub {
-#   my $wheel = new PracticalCode::Wheel($args);
-#   is($wheel->circumference, 91.106186954104);
-#   done_testing;
-# };
+subtest "size" => sub {
+  my $bike = new PracticalCode::Bicycle($args);
+  is($bike->size, 26);
+  done_testing;
+};
+
+subtest "spares" => sub {
+  my $bike = new PracticalCode::Bicycle($args);
+  is($bike->spares->get_int("tire_size"), 23);
+  is($bike->spares->get("tape_color"), 'red');
+  done_testing;
+};
 
 done_testing;
