@@ -20,9 +20,8 @@ use SPVM 'PracticalCode::Bicycle';
 
 # begin test
 my $strs = SPVM::StringList->new_len(0);
-$strs->push('green');
 my $args = SPVM::Hash->new;
-$args->set(tape_color => $strs->shift);
+$strs->push('green'); $args->set(tape_color => $strs->shift);
 $args->set_int(size => 26);
 
 subtest "new" => sub {
