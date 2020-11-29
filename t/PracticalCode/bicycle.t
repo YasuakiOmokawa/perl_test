@@ -22,7 +22,7 @@ use SPVM 'PracticalCode::Bicycle';
 my $strs = SPVM::StringList->new_len(0);
 my $args = SPVM::Hash->new;
 $strs->push('green'); $args->set(tape_color => $strs->shift);
-$args->set_int(size => 26);
+$strs->push('S'); $args->set(size => $strs->shift);
 
 subtest "new" => sub {
   my $bike = new PracticalCode::Bicycle($args);
@@ -32,7 +32,7 @@ subtest "new" => sub {
 
 subtest "size" => sub {
   my $bike = new PracticalCode::Bicycle($args);
-  is($bike->size, 26);
+  is($bike->size, 'S');
   done_testing;
 };
 
