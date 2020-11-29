@@ -39,11 +39,20 @@ subtest "size" => sub {
   done_testing;
 };
 
-subtest "spares" => sub {
+subtest "spares - road" => sub {
+  my $bike = new PracticalCode::Bicycle($args);
+  is($bike->spares->get("chain"), '10-speed');
+  is($bike->spares->get_int("tire_size"), 23);
+  is($bike->spares->get("tape_color"), $args->get("tape_color"));
+  done_testing;
+};
+
+subtest "spares - mountain" => sub {
+  $strs->push('mountain'); $args->set(style => $strs->shift);
   my $bike = new PracticalCode::Bicycle($args);
   is($bike->spares->get("chain"), '10-speed');
   is($bike->spares->get_double("tire_size"), 2.1);
-  isnt($bike->spares->exists("tape_color"), TRUE);
+  is($bike->spares->get("rear_shock"), $args->get("rear_shock"));
   done_testing;
 };
 
