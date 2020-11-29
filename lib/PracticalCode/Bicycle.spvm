@@ -26,7 +26,7 @@ package PracticalCode::Bicycle {
 
   sub spares : SPVM::Hash ($self : self) {
     my $res = SPVM::Hash->new;
-    if ($self->style == "road") {
+    if ($self->style == 'road') {
       $res->set(chain => "10-speed");
       $res->set_int(tire_size => 23);
       $res->set(tape_color => $self->tape_color);
