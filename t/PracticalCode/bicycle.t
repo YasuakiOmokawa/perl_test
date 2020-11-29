@@ -20,10 +20,12 @@ use SPVM 'PracticalCode::Bicycle';
 
 # begin test
 my $strs = SPVM::StringList->new_len(0);
-$strs->push('green');
 my $args = SPVM::Hash->new;
-$args->set(tape_color => $strs->shift);
-$args->set_int(size => 26);
+$strs->push('green'); $args->set(tape_color => $strs->shift);
+$strs->push('S'); $args->set(size => $strs->shift);
+$strs->push('road'); $args->set(style => $strs->shift);
+$strs->push('Maitou'); $args->set(front_shock => $strs->shift);
+$strs->push('Fox'); $args->set(rear_shock => $strs->shift);
 
 subtest "new" => sub {
   my $bike = new PracticalCode::Bicycle($args);
@@ -33,14 +35,24 @@ subtest "new" => sub {
 
 subtest "size" => sub {
   my $bike = new PracticalCode::Bicycle($args);
-  is($bike->size, 26);
+  is($bike->size, 'S');
   done_testing;
 };
 
-subtest "spares" => sub {
+subtest "spares - road" => sub {
   my $bike = new PracticalCode::Bicycle($args);
+  is($bike->spares->get("chain"), '10-speed');
   is($bike->spares->get_int("tire_size"), 23);
-  is($bike->spares->get("tape_color"), 'red');
+  is($bike->spares->get("tape_color"), $args->get("tape_color"));
+  done_testing;
+};
+
+subtest "spares - mountain" => sub {
+  $strs->push('mountain'); $args->set(style => $strs->shift);
+  my $bike = new PracticalCode::Bicycle($args);
+  is($bike->spares->get("chain"), '10-speed');
+  is($bike->spares->get_double("tire_size"), 2.1);
+  is($bike->spares->get("rear_shock"), $args->get("rear_shock"));
   done_testing;
 };
 
