@@ -1,25 +1,40 @@
 package PracticalCode::Bicycle {
   use SPVM::Hash;
 
+  has style : string;
   has size : string;
   has tape_color : string;
+  has front_shock : string;
+  has rear_shock : string;
 
   sub new : PracticalCode::Bicycle ($args : SPVM::Hash) {
     my $self = new PracticalCode::Bicycle;
+    $self->{style} = (string)$args->get("style");
     $self->{size} = (string)$args->get("size");
     $self->{tape_color} = (string)$args->get("tape_color");
+    $self->{front_shock} = (string)$args->get("front_shock");
+    $self->{rear_shock} = (string)$args->get("rear_shock");
     return $self;
   }
 
   # accessor
+  sub style : string ($self : self) { return $self->{style}; }
   sub size : string ($self : self) { return $self->{size}; }
   sub tape_color : string ($self : self) { return $self->{tape_color}; }
+  sub front_shock : string ($self : self) { return $self->{front_shock}; }
+  sub rear_shock : string ($self : self) { return $self->{rear_shock}; }
 
   sub spares : SPVM::Hash ($self : self) {
     my $res = SPVM::Hash->new;
-    $res->set_int(tire_size => 23);
-    $res->set(chain => "10-speed");
-    $res->set(tape_color => "red");
+    if ($self->style == "road") {
+      $res->set(chain => "10-speed");
+      $res->set_int(tire_size => 23);
+      $res->set(tape_color => $self->tape_color);
+    } else {
+      $res->set(chain => "10-speed");
+      $res->set_double(tire_size => 2.1);
+      $res->set(rear_shock => $self->rear_shock);
+    }
     return $res;
   }
 

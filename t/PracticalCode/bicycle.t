@@ -23,6 +23,9 @@ my $strs = SPVM::StringList->new_len(0);
 my $args = SPVM::Hash->new;
 $strs->push('green'); $args->set(tape_color => $strs->shift);
 $strs->push('S'); $args->set(size => $strs->shift);
+$strs->push('road'); $args->set(style => $strs->shift);
+$strs->push('Maitou'); $args->set(front_shock => $strs->shift);
+$strs->push('Fox'); $args->set(rear_shock => $strs->shift);
 
 subtest "new" => sub {
   my $bike = new PracticalCode::Bicycle($args);
@@ -38,8 +41,9 @@ subtest "size" => sub {
 
 subtest "spares" => sub {
   my $bike = new PracticalCode::Bicycle($args);
-  is($bike->spares->get_int("tire_size"), 23);
-  is($bike->spares->get("tape_color"), 'red');
+  is($bike->spares->get("chain"), '10-speed');
+  is($bike->spares->get_double("tire_size"), 2.1);
+  isnt($bike->spares->exists("tape_color"), TRUE);
   done_testing;
 };
 
